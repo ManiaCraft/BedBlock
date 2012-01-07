@@ -1,6 +1,7 @@
 package de.maniacraft.bedblock;
 
 import org.bukkit.entity.Player;
+import org.bukkit.ChatColor;
 import org.bukkit.event.player.PlayerBedEnterEvent;
 import org.bukkit.event.player.PlayerListener;
 
@@ -16,7 +17,8 @@ public class BedblockPlayerListener extends PlayerListener
   public void onPlayerBedEnter(PlayerBedEnterEvent event)
   {
     Player player = event.getPlayer();
-    player.kickPlayer(kickmessage);
+    event.setCancelled(true);
+    player.sendMessage(ChatColor.BLUE + kickmessage);
   }
 
 }
