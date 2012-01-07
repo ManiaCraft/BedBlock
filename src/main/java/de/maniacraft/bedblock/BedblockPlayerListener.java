@@ -16,9 +16,11 @@ public class BedblockPlayerListener extends PlayerListener
 
   public void onPlayerBedEnter(PlayerBedEnterEvent event)
   {
-    Player player = event.getPlayer();
-    event.setCancelled(true);
-    player.sendMessage(ChatColor.BLUE + kickmessage);
+	if(plugin.getServer().getOnlinePlayers().length > 1) {
+	    Player player = event.getPlayer();
+	    event.setCancelled(true);
+	    player.sendMessage(ChatColor.BLUE + kickmessage);
+	}
   }
 
 }
