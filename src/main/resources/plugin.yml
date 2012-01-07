@@ -1,0 +1,8 @@
+author: ManiaCraft
+database: false
+generator: http://dinnerbone.com/minecraft/tools/pluginator/
+main: de.maniacraft.bedblock.Bedblock
+name: BedBlock
+startup: postworld
+url: http://www.maniacraft.de/
+version: '1.0'
